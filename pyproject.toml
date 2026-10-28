@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tocomicsil-redos"
+version = "0.1.0"
+description = "从样本里推断正则回溯的拒绝服务应有的字段集合，逐字段检查存在性与类型，缺失项单独列出"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "tocomicsil" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://tocomicsil.github.io"
+Repository = "https://github.com/tocomicsil/redos"
+Issues = "https://github.com/tocomicsil/redos/issues"
+
+[project.scripts]
+redos = "redos:main"
+
+[tool.setuptools]
+py-modules = ["redos"]
